@@ -30,9 +30,8 @@ object PlayersController extends Controller{
   }
 
   def delete(id: Int) = Action{
-    val deleted = PlayerRepository.deleteById(id)
-
-    NotImplemented
+    PlayerRepository.deleteById(id)
+    Ok
   }
 
   def edit = Action{
